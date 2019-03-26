@@ -1,0 +1,30 @@
+{
+	"name": "mapkyca/elgg-link-tracking",
+	"type": "elgg-plugin",
+	"description": "Provides mechanisms for clicks on urls placed on certain pages",
+	"version": "0.0.1",
+	"homepage": "https://www.marcus-povey.co.uk",
+	"keywords": [
+		"elgg",
+		"plugin",
+		"analytics",
+		"tracking"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Marcus Povey",
+			"email": "marcus@marcus-povey.co.uk"
+		}
+	],
+	"require": {
+		"php": ">=5.5",
+		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "Classes/"
+		}
+	}
+}
+

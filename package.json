@@ -1,0 +1,13 @@
+{
+	"name": "elgg-link-tracking",
+	"version": "0.0.1",
+	"license": "GPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:mapkyca/elgg-link-tracking.git",
+		"owner": "mapkyca",
+		"repo": "elgg-link-tracking"
+	},
+	"devDependencies": {
+	}
+}
