@@ -17,10 +17,12 @@ class CreateLinkTrackingTable {
 		    `id` int(11) NOT NULL AUTO_INCREMENT,
 		    `url` varchar(255),
 		    `from` varchar(255),
+		    `user_guid` int(11) NOT NULL,
 		    `timestamp` int(11) NOT NULL DEFAULT '0',
 		    PRIMARY KEY (`id`),
 		    KEY(`url`),
 		    KEY(`from`),
+		    KEY(`user_guid`),
 		    KEY(`timestamp`)
 		)
 	");

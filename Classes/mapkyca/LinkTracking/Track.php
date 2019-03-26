@@ -16,13 +16,14 @@ class Track {
 	
 	return _elgg_services()->db->insertData("
 	    INSERT INTO {$config['prefix']}link_tracking 
-		(url, `from`, timestamp)
+		(url, `from`, user_guid, timestamp)
 		VALUES
-		(:url, :from, :time)
+		(:url, :from, :user_guid, :time)
 	", [
 	    ':url' => $url,
 	    ':from' => $_SERVER['HTTP_REFERER'],
-	    ':time' => time()
+	    ':time' => time(),
+	    ':user_guid' => elgg_get_logged_in_user_guid()
 	]);
     }
     
@@ -36,9 +37,9 @@ class Track {
 	];
 	
 	return _elgg_services()->db->getData(" 
-	    SELECT url, `from`, count(`url`) as urlcount
+	    SELECT url, `from`, user_guid, count(`url`) as urlcount
 	    FROM {$config['prefix']}link_tracking 
-	    GROUP BY url, `from`
+	    GROUP BY url, user_guid
 	    ORDER by urlcount DESC
 	");
     }
