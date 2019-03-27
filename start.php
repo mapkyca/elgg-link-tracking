@@ -2,16 +2,6 @@
 
 elgg_register_event_handler('init', 'system', function () {
     
-    // Load classes
-    spl_autoload_register(function($class) {
-	$class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-
-	$basedir = dirname(__FILE__) . '/Classes/';
-	if (file_exists($basedir.$class.'.php')) { 
-	    include_once($basedir.$class.'.php');
-	}
-    });
-    
     // Register input page
     elgg_register_page_handler('link_tracking', function($page) {
 	

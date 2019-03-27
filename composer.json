@@ -2,7 +2,7 @@
 	"name": "mapkyca/elgg-link-tracking",
 	"type": "elgg-plugin",
 	"description": "Provides mechanisms for clicks on urls placed on certain pages",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"homepage": "https://www.marcus-povey.co.uk",
 	"keywords": [
 		"elgg",
